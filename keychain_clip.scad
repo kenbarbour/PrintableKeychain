@@ -1,30 +1,15 @@
 include <lib.scad>;
+include <measurements.scad>;
 
-keychainWidth = 25;
-keychainLength = 100;
-
-nutThickness = 2.8;
-nutDiameter = 7;
-screwHoleDiameter = 3.5;
-screwHeadDiameter = 7.5;
-screwHeadThickness = 3.5;
-baseThickness = 1.23;
-filletRadius = 3;
-
-fulcrumHeight = 6.5;
-fulcrumSpacing = 12;
-fulcrumFillet = 2;
-
-springDiameter = 4;
-
-clipWidth = fulcrumSpacing-2;
-clipLength = keychainLength*.9;
-clipThickness = screwHoleDiameter + 2*1;
-clipRadius = 2;
-
-$fn = 32;
-
-translate([clipWidth,0,clipThickness]) rotate([0,180,0]) 
-	cube_fillet_bottom([clipWidth, clipLength - clipWidth/2, clipThickness], clipRadius);
-translate([clipWidth/2, clipLength-clipWidth/2, 0])
-	rounded_cylinder(r1=clipWidth/2, r2=clipRadius, h=clipThickness);
+difference() {
+	union() {
+		translate([clipWidth,0,clipThickness]) rotate([0,180,0]) 
+			cube_fillet_bottom([clipWidth, clipLength - clipWidth/2, clipThickness], clipRadius);
+		translate([clipWidth/2, clipLength-clipWidth/2, 0])
+			rounded_cylinder(r1=clipWidth/2, r2=clipRadius, h=clipThickness);
+	}
+	translate([0, keychainWidth/2, clipThickness/2]) rotate([0,90,0])
+		cylinder(r=screwHoleDiameter/2, h=fulcrumSpacing);
+	// Spring perch
+	translate([clipWidth/2,keychainWidth/6,-.001]) cylinder(r=springDiameter/2, h=springDepth);
+}

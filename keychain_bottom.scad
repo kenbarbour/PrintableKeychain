@@ -8,15 +8,7 @@
  @copyright 2014
  */
 include <lib.scad>;
-
-keychainWidth = 25;
-keychainLength = 100;
-
-screwHoleDiameter = 3.5;
-screwHeadDiameter = 7.5;
-screwHeadThickness = 3.5;
-baseThickness = 2;
-filletRadius = 4;
+include <measurements.scad>;
 
 difference() {
 	keychain_blank(size=[keychainWidth, keychainLength, screwHeadThickness+baseThickness], r=filletRadius);
