@@ -1,7 +1,7 @@
 FN=32
 DFLAGS = '$$fn=$(FN)'
 
-all: keychain_bottom.stl keychain_top.stl
+all: keychain_bottom.stl keychain_top.stl keychain_clip.stl
 
 keychain_top.stl: keychain_top.scad lib.scad
 	openscad -o keychain_top.stl -D $(DFLAGS) keychain_top.scad

@@ -1,19 +1,19 @@
-keychainWidth = 25;
-keychainLength = 100;
+keychainWidth = 23;
+keychainLength = 80;
 
-nutThickness = 2.8;
-nutDiameter = 7;
-screwHoleDiameter = 3.5;
-screwHeadDiameter = 7.5;
+nutThickness = 3.2;
+nutDiameter = 7.9;
+screwHoleDiameter = 3.0;
+screwHeadDiameter = 6;
 screwHeadThickness = 3.5;
-baseThickness = 1.23;
+baseThickness = 1.5;
 filletRadius = 3;
 
 fulcrumHeight = 8;
 fulcrumSpacing = 12;
 fulcrumFillet = 2;
 
-springDiameter = 4;
+springDiameter = 4.5;
 springDepth = 3;
 
 clipWidth = fulcrumSpacing-2;
