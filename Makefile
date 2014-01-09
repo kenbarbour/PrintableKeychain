@@ -1,4 +1,4 @@
-all: keychain_top.stl keychain_bottom.stl keychain_clip.stl
+all: keychain_bottom.stl 
 
 keychain_top.stl: keychain_top.scad lib.scad
 	openscad -o keychain_top.stl keychain_top.scad
