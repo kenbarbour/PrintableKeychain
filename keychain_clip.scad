@@ -1,6 +1,8 @@
 include <lib.scad>;
 include <measurements.scad>;
 
+$fn = 24;
+
 difference() {
 	union() {
 		translate([clipWidth,0,clipThickness]) rotate([0,180,0]) 

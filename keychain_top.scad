@@ -1,6 +1,8 @@
 include <lib.scad>;
 include <measurements.scad>;
 
+$fn = 24;
+
 difference() {
 	union() {
 		keychain_blank(size=[keychainWidth, keychainLength, nutThickness+baseThickness], r=filletRadius);

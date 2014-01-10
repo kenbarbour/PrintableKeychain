@@ -10,6 +10,8 @@
 include <lib.scad>;
 include <measurements.scad>;
 
+$fn = 24;
+
 difference() {
 	keychain_blank(size=[keychainWidth, keychainLength, screwHeadThickness+baseThickness], r=filletRadius);
 	translate([keychainWidth/2, keychainWidth/2.5,0])

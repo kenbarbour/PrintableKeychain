@@ -32,9 +32,17 @@ module keychain_blank(size=[10,50,5], r=2) {
  * @param h overall height of cylinder
  */
 module rounded_cylinder(r1, r2, h) {
-	minkowski() {
-		cylinder(r=r1-r2, h=.0001);
-   	bullet(r=r2, h=h-.0001);
+	fragments = max(ceil($fn/4),3);
+	union() {
+		cylinder(r=r1, h=h-r2);
+		for (i = [0 : fragments]) {
+		translate([0,0,h-r2+(r2/fragments*i)])
+			cylinder(
+					r1=r1-r2 + sqrt(pow(r2,2)-pow(r2/fragments*i,2)),
+					r2=r1-r2 + sqrt(pow(r2,2)-pow(r2/fragments*(i+1),2)),
+					h=r2/fragments
+				);
+		}
 	}
 }
 
