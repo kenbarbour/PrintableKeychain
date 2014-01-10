@@ -1,6 +1,6 @@
 include <lib.scad>;
 include <measurements.scad>;
-$fn=26;
+
 difference() {
 	union() {
 		keychain_blank(size=[keychainWidth, keychainLength, nutThickness+baseThickness], r=filletRadius);
@@ -9,9 +9,9 @@ difference() {
 	}
 
 	// Main plate screw holes
-	translate([keychainWidth/2, keychainWidth/2, 0])
+	translate([keychainWidth/2, keychainWidth/2.5, 0])
 		hex_nut_hole(screwHoleDiameter, baseThickness+nutThickness, nutDiameter, nutThickness);
-	translate([keychainWidth/2, keychainLength - keychainWidth/2, 0])
+	translate([keychainWidth/2, keychainLength - keychainWidth/2.5, 0])
 		hex_nut_hole(screwHoleDiameter, baseThickness+nutThickness, nutDiameter, nutThickness);
 	translate([keychainWidth/2, keychainLength/2, 0])
 		hex_nut_hole(screwHoleDiameter, baseThickness+nutThickness, nutDiameter, nutThickness);
@@ -22,9 +22,9 @@ difference() {
 
 	// clip screw
 	translate([keychainWidth/2, keychainWidth/2, clipScrewHeight]) rotate([0,90,0])
-		hex_nut_hole(screwHoleDiameter, keychainWidth/2, nutDiameter, nutThickness+.5);
+		hex_nut_hole(screwHoleDiameter, keychainWidth/2, nutDiameter, nutThickness+0);
 	translate([keychainWidth/2, keychainWidth/2, clipScrewHeight]) rotate([0,-90,0])
-		socket_screw_hole(screwHoleDiameter, keychainWidth/2 - screwHeadThickness, screwHeadDiameter, screwHeadThickness);
+		socket_screw_hole(screwHoleDiameter, keychainWidth/2 - screwHeadThickness+1, screwHeadDiameter, screwHeadThickness-1);
 
 	// Spring perch
 	translate([keychainWidth/2,keychainWidth/6, baseThickness+nutThickness-springDepth]) cylinder(r=springDiameter/2, h=springDepth);

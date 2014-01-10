@@ -12,9 +12,9 @@ include <measurements.scad>;
 
 difference() {
 	keychain_blank(size=[keychainWidth, keychainLength, screwHeadThickness+baseThickness], r=filletRadius);
-	translate([keychainWidth/2, keychainWidth/2,0])
+	translate([keychainWidth/2, keychainWidth/2.5,0])
 		socket_screw_hole(screwHoleDiameter, baseThickness, screwHeadDiameter, screwHeadThickness);
-	translate([keychainWidth/2, keychainLength - keychainWidth/2,0])
+	translate([keychainWidth/2, keychainLength - keychainWidth/2.5,0])
 		socket_screw_hole(screwHoleDiameter, baseThickness, screwHeadDiameter, screwHeadThickness);
 	translate([keychainWidth/2, keychainLength/2,0])
 		socket_screw_hole(screwHoleDiameter, baseThickness, screwHeadDiameter, screwHeadThickness);
