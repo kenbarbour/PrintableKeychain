@@ -19,7 +19,7 @@ difference() {
 		hex_nut_hole(screwHoleDiameter, baseThickness+nutThickness, nutDiameter, nutThickness);
 
 	// Clip channel
-	translate([(keychainWidth-fulcrumSpacing)/2,0,baseThickness+nutThickness-.01]) 
+	translate([(keychainWidth-fulcrumSpacing)/2,0,baseThickness+nutThickness]) 
 		cube_fillet_bottom([fulcrumSpacing, keychainWidth, fulcrumHeight+.01], fulcrumFillet);
 
 	// clip screw

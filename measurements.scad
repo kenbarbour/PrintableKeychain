@@ -9,15 +9,15 @@ screwHeadThickness = 3.5;
 baseThickness = 1.3;
 filletRadius = 3;
 
-fulcrumHeight = 9.25;
+fulcrumHeight = 8.9;
 fulcrumSpacing = 12;
-fulcrumFillet = 2;
+fulcrumFillet = 1.2;
 
 springDiameter = 5.5;
-springDepth = 3;
+springDepth = 3.3;
 
 clipWidth = fulcrumSpacing-1.5;
 clipLength = keychainLength*.94;
 clipThickness = screwHoleDiameter + 2*1;
-clipScrewHeight = baseThickness + nutThickness + screwHoleDiameter/2 + 3.6;
+clipScrewHeight = baseThickness + nutThickness + screwHoleDiameter/2 + 3.1;
 clipRadius = 2;
