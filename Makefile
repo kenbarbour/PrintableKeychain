@@ -1,4 +1,4 @@
-FN=20
+FN=64
 DFLAGS = '$$fn=$(FN)'
 
 all: keychain_bottom.stl keychain_top.stl keychain_clip.stl
