@@ -20,5 +20,5 @@ difference() {
 
 	// Cut taper
 	translate([0,0,clipThickness/.9]) rotate([-2,0,0])
-		cube([clipWidth, clipLength, clipThickness*2]);
+		cube([clipWidth, keychainLength, clipThickness*2]);
 }
