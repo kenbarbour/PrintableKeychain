@@ -27,5 +27,5 @@ difference() {
 		socket_screw_hole(screwHoleDiameter, keychainWidth/2 - screwHeadThickness, screwHeadDiameter+.5, screwHeadThickness+1.5);
 
 	// Spring perch
-	translate([keychainWidth/2,keychainWidth/6, baseThickness]) cylinder(r=springDiameter/2, h=springDepth);
+	translate([keychainWidth/2,keychainWidth/6, baseThickness+nutThickness-springDepth]) cylinder(r=springDiameter/2, h=springDepth);
 }
