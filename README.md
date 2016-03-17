@@ -20,7 +20,7 @@ Alternatively, you can open any of the files described below in OpenSCAD and gen
 * **lib.scad** - Some functions used to generate the parts
 
 ### Other files
-* **Makefile** - used by ''make'' to generate models.  Use the command ``make all`` to generate models
+* **Makefile** - used by __make__ to generate models.  Use the command ``make all`` to generate models
 
 ## Required Hardware
 * (2) M3 Socket Head screw (length varies, depending on the number of keys)
@@ -29,3 +29,7 @@ Alternatively, you can open any of the files described below in OpenSCAD and gen
 * (n+2) M3 washers (where n = number of keys) - between keys and top/bottom
 
 ## Assembly Instructions
+  1. Insert M3 nuts into __keychain_top__ by tightening the M3 screw with a washer from the inside of the __keychain_top__.  Don't forget the nut for the clip clevis.
+  2. Sandwich the keys between the __keychain_top__ and __keychain_bottom__, placing a washer between the keys and the printed part and between each key.
+  3. Screw the __keychain_bottom__ into the __keychain_top__ tight enough so that the keys don't flop around,  but loose enough so that they can be folded out easily.
+  4. With the spring seated in the spring boss on the __keychain_top__, attach the __keychain_clip__ with another M3 screw, being careful not to overtighten and break the part.
